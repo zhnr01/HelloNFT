@@ -52,13 +52,12 @@ SUPPORTED_INTERFACES: constant(bytes4[2]) = [
     0x80ac58cd,  # ERC165 interface ID of ERC721
 ]
 
-# Constructor
 @external
-def __init__():
+def __init__(_name: String[64], _symbol: String[32], _baseURL: String[256]):
     self.minter = msg.sender
-    self.baseURL = "ipfs://bafybeigjerexlbyz6q5ak5ad3bmz3r676j3i7picfs6zjwkhtkn5wogslq/"
-    self.name = "Hello NFT"
-    self.symbol = "HEL"
+    self.baseURL = _baseURL
+    self.name = _name
+    self.symbol = _symbol
 
 # ERC165 Support
 @view
