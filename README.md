@@ -1,6 +1,12 @@
 # HelloNFT
 A simple NFT smart contract written in Vyper.
 
+The smart contract is deployed on Sepolia testnet.
+
+- **Contract Address:** `0x5b28067aFb45744559Da74Cf55Aa19a01f05e38f`
+- **Etherscan Link:** [View on Sepolia Etherscan](https://sepolia.etherscan.io/address/0x5b28067aFb45744559Da74Cf55Aa19a01f05e38f)
+
+
 ## NFT Deployment with Ape Framework (Vyper + Sepolia)
 
 This guide explains how to set up the [Ape Framework](https://docs.apeworx.io/) for deploying an NFT smart contract written in Vyper to the **Sepolia testnet** using **Alchemy**.
@@ -18,6 +24,12 @@ This guide explains how to set up the [Ape Framework](https://docs.apeworx.io/) 
 ## 2️⃣ Install Ape Framework
 
 ```bash
+# Create virtual environment
+python3 -m venv env
+
+# Activate the virtual environment
+source env/bin/activate
+
 # Install Ape
 pip install eth-ape'[recommended-plugins]'
 ```
@@ -103,5 +115,5 @@ ape compile
 Run:
 
 ```bash
-ape run deploy.py --network ethereum:sepolia:alchemy
+ape run deploy --network ethereum:sepolia:alchemy
 ```
