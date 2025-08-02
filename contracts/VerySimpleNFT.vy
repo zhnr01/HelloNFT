@@ -44,7 +44,7 @@ ownerToOperators: HashMap[address, HashMap[address, bool]]
 
 # Admin
 minter: address
-baseURL: String[53]
+baseURL: String[150]
 
 # Supported interfaces
 SUPPORTED_INTERFACES: constant(bytes4[2]) = [
@@ -56,7 +56,7 @@ SUPPORTED_INTERFACES: constant(bytes4[2]) = [
 @external
 def __init__():
     self.minter = msg.sender
-    self.baseURL = "ipfs://<CID>/"
+    self.baseURL = "ipfs://bafybeigjerexlbyz6q5ak5ad3bmz3r676j3i7picfs6zjwkhtkn5wogslq/"
     self.name = "Hello NFT"
     self.symbol = "HEL"
 
@@ -192,5 +192,10 @@ def burn(_tokenId: uint256):
 # Metadata
 @view
 @external
-def tokenURI(tokenId: uint256) -> String[132]:
-    return concat(self.baseURL, uint2str(tokenId))
+def tokenURI(tokenId: uint256) -> String[256]:
+    return concat(self.baseURL, concat(uint2str(tokenId), ".json"))
+
+@external
+def setBaseURL(_newBaseURL: String[150]):
+    assert msg.sender == self.minter  
+    self.baseURL = _newBaseURL
