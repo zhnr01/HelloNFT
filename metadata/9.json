@@ -1,9 +1,0 @@
-{
-  "name": "Hello NFT #9",
-  "description": "A simple NFT created for learning purposes.",
-  "image": "https://ipfs.io/ipfs/bafybeihotxaqxxa3masjjn7eszprdpfogn4aw3bzueoxeyxreo2fje65di/9.png",
-  "attributes": [
-    { "trait_type": "Background", "value": "Blue" },
-    { "trait_type": "Mood", "value": "Happy" }
-  ]
-}
