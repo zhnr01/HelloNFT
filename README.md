@@ -1,5 +1,24 @@
 # HelloNFT
-A simple NFT smart contract written in Vyper.
+A simple NFT smart contract.
+
+## **📜 Contract Features**
+
+This NFT contract is implemented in **Vyper** and follows the **ERC‑721** standard.
+
+### **Main Features**
+
+* **ERC‑721 compliant** — Implements the standard NFT interface.
+* **ERC‑165 support** — For interface detection.
+* **Minting** — Only the contract minter can mint new tokens.
+* **Burning** — Token owners (or approved addresses) can burn NFTs.
+* **Transfer & Safe Transfer** — Supports both `transferFrom` and `safeTransferFrom`.
+* **Approval** — Allows single token approval and operator approval for all tokens.
+* **Metadata Support**:
+
+  * `name` and `symbol` stored on‑chain.
+  * `baseURL` used to generate `tokenURI`.
+  * Token metadata follows `{baseURL}{tokenId}.json` format.
+* **Set Base URL** — Minter can update the metadata base URL.
 
 The smart contract is deployed on Sepolia testnet.
 
