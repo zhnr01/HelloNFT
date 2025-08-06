@@ -53,7 +53,7 @@ SUPPORTED_INTERFACES: constant(bytes4[2]) = [
 ]
 
 @external
-def __init__(_name: String[64], _symbol: String[32], _baseURL: String[256]):
+def __init__(_name: String[32], _symbol: String[32], _baseURL: String[150]):
     self.minter = msg.sender
     self.baseURL = _baseURL
     self.name = _name
